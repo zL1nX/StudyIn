@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/answer/answer",
+    "pages/more/more",
+    "pages/mark/mark",
+    "pages/request/request",
+    "pages/order/order",
+    "pages/myvideo/myvideo",
+    "pages/detail/detail",
+    "pages/information/information",
+    "pages/changeInfo/changeInfo",
+    "pages/video/video",
+    "pages/person_detail/person_detail",
+    "pages/shop/shop",
+    "pages/about/about"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#61bfad",
+    "navigationBarTitleText": "StudyIn",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "color": "#def1f1",
+    "selectedColor": "#167e6a",
+    "backgroundColor": "#def1f1",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "",
+      "iconPath": "images/首页.png",
+      "selectedIconPath": "images/首页1.png"
+    },{
+      "pagePath": "pages/request/request",
+      "text": "",
+     "iconPath": "images/编辑.png",
+    "selectedIconPath": "images/编辑2.png"
+    },
+      {
+      "pagePath": "pages/more/more",
+      "text": "",
+      "iconPath": "images/个人中心.png",
+      "selectedIconPath": "images/个人中心2.png"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
