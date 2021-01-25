@@ -1,0 +1,118 @@
+
+<!--index.wxml-->
+
+
+<view class="swiper-tab" >  
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">完成的预约</view>  
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">我发出的预约</view>   
+</view>  
+
+
+
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  
+
+
+<swiper style='height:100%'current="{{currentTab}}"  duration="300"  bindchange="bindChangetab">  
+    <swiper-item>  
+        <view>
+        
+          <view class="showtext" wx:if="{{orderdata.length == 0}}">
+                <text>没有更多数据</text>
+          </view>
+          <block wx:for="{{orderdata}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+            <view class="feed-item">
+              <view class="feed-source" style="display:inline-block;width:50%">
+                <a class="">
+                    <view class="avatar">
+                        <image src="{{item.feed_source_img}}"></image>
+                    </view>
+                    <text>{{item.feed_source_name}} {{item.feed_source_txt}}</text>
+                </a>
+              </view>
+
+              <view class="feed-content" style="padding-top:30rpx;padding-bottom:30rpx" >
+                <view class="question" id="{{item.question_id}}" bindtap="bindItemTap" style="text-align:center; ">
+                    <a class="question-link">
+                        <text>{{item.question}}</text>
+                    </a>
+                </view>
+                <view class="answer-body">
+                    
+                </view>
+            </view>
+            <view style="display:inline-block;width:100%;height:60rpx;text-align:center">
+              <view wx:if="{{cid == idx}}" style="height:50rpx;display:inline-block;margin-left:20rpx;">
+                <text style="font-size:30rpx;font-weight:bold;color:#61bfad;padding-right:30rpx;">已评价    </text>
+                  <block wx:for="{{list}}">
+                    <text style="padding-right: .5em; font-size:40rpx;color:#FFD700">★</text>
+                  </block>
+              </view>
+              <button data-idx="{{idx}}" wx:else bindtap="popmodal" size="mini" type='primary' style="background-color:#61bfad;border-radius:20rpx;">评分</button>
+                
+            <view class="commodity_screen" bindtap="hideModal"wx:if="{{showModalStatus}}"></view>
+              <view class="commodity_attr_box" animation="{{animationData}}" wx:if="{{showModalStatus}}">
+
+                <form bindsubmit="starsubmit">
+                  <view  bindtap="myStarChoose" class="feed-item" style="text-align:center;">
+                    <block wx:for="{{starMap}}" >
+                        <text wx:if="{{star>=index+1}}" style="padding-right: .5em; font-size:60rpx;color:#FFD700;" data-star="{{index+1}}">★</text>
+                        <text wx:if="{{star<index+1}}" style="padding-right: .5em;font-size:60rpx"  data-star="{{index+1}}">☆</text>
+            
+                    </block>
+                  </view>
+    <!--★-->
+                  <view class="fontstyle " style="font-size:30rpx;text-align:center;margin-top:30rpx;color:red;height:60rpx;" >{{starMap[star-1]}}</view>
+                  <view style="text-align:center; margin:10rpx; ">
+                    <button form-type="submit" type="primary" size="mini" style="background-color:#61bfad; width:30%"> 确认</button>
+                  </view>
+                </form>   
+              </view>
+            </view>
+          </view>
+      </block>
+    </view>  
+    </swiper-item>  
+    <swiper-item>  
+        <view>
+        
+          <view class="showtext" wx:if="{{orderdata2.length == 0}}">
+                <text>没有更多数据</text>
+          </view>
+          <block wx:for="{{orderdata2}}" wx:for-index="idx" wx:for-item="item2" data-idx="{{idx}}">
+            <view class="feed-item">
+              <view class="feed-source" style="display:inline-block;width:50%">
+                <a class="">
+                    <view class="avatar">
+                        <image src="{{item2.feed_source_img}}"></image>
+                    </view>
+                    <text>{{item2.feed_source_name}} {{item2.feed_source_txt}}</text>
+                </a>
+              </view>
+
+              <view class="feed-content" style="padding-top:30rpx;padding-bottom:30rpx" >
+                <view class="question" id="{{item2.question_id}}" style="text-align:center; ">
+                    <a class="question-link">
+                        <text>{{item2.question}}</text>
+                    </a>
+                </view>
+                <view class="answer-body">
+                    暂未被预约
+                </view>
+            </view>
+             
+          </view>
+        </block> 
+      </view>
+    </swiper-item>  
+    
+</swiper>
+
+
+
+
+
+
+
+</scroll-view>
+

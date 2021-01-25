@@ -1,0 +1,104 @@
+<!--answer.wxml-->
+<view class="container" style="background:white">
+  <view class="question">
+    <text class="question-title">【{{feeddata.feed_source_txt}}】{{feeddata.question}}</text>
+  </view>
+  <view class="answerer-wrp" bindtap="viewInfo">
+    <view class="bg-half"></view>
+    <view class="answerer flex-wrp">
+      <view class="avatar flex-item">
+        <image src="{{feeddata.feed_source_img}}"></image>
+      </view>
+      <view class="answerer-info flex-item">
+        <text class="answerer-name">{{feeddata.feed_source_name}}</text>
+        <text class="answerer-des" style='margin-top:8rpx;'>{{feeddata.school}}</text>
+      </view>
+      <!--<view class="follow flex-item">
+                <text>十 关注</text></view>-->
+
+    </view>
+  </view>
+  <view class="answer-content">
+   
+   <view class='item-info' >
+      <view style="display:block">
+        <image src="/images/flag_fill.png" style="width:50rpx;height:50rpx;padding-right:40rpx; vertical-align:middle"></image>
+        <text class='item_value'>{{feeddata.subject}}</text>
+      </view>
+    </view>
+
+<view class='item-info'>
+      <view style="display:block">
+        <image src="/images/activity_fill.png" style="width:50rpx;height:50rpx;padding-right:40rpx; vertical-align:middle"></image>
+        <view class='item_value'>{{feeddata.date}}</view>
+      </view>
+    </view>
+
+    <view class='item-info'>
+      <view style="display:block">
+        <image src="/images/time_fill.png" style="width:50rpx;height:50rpx;padding-right:40rpx; vertical-align:middle"></image>
+        <view class='item_value'>{{feeddata.time_start}} ~ {{feeddata.time_end}}</view>
+      </view>
+    </view>
+
+
+
+     <view class='item-info'>
+      <view style="display:block">
+        <image src="/images/coordinates_fill.png" style="width:50rpx;height:50rpx;padding-right:40rpx; vertical-align:middle"></image>
+        <view class='item_value'>{{feeddata.location}}</view>
+      </view>
+    </view>
+
+
+
+  </view>
+      <view class='content' style='width:640rpx;'>
+        {{feeddata.answer_ctnt}}
+        </view>
+
+
+
+
+    <view class="answer-footer flex-wrp" style='height:120rpx;'>
+      <!--<view class="good flex-item">
+            <view class="good-bad">
+                <image src="../../images/good-bad.png"></image>
+            </view>
+            <view class="good-num">2.1k</view>
+        </view>-->
+      <view class="operation-wrp flex-item">
+        <view class="operation flex-wrp flex-tab" id="{{feeddata.question_id}}" style="margin:0rpx;">
+          <view class="operation-btn flex-item">
+            <view wx:if="{{ !feeddata.good_num}}">
+              <image src="../../images/flag.png" bindtap='tapOrder'></image>
+              <text style="font-size:20rpx;">我要预约</text>
+            </view>
+            <view wx:else>
+              <image src="../../images/flag_fill.png" bindtap='tapOrder'></image>
+              <text style="font-size:20rpx;">已预约</text>
+            </view>
+          </view>
+          <!--<view class="operation-btn flex-item">
+                    <image src="../../images/heart2.png"></image>
+                    <text>标记</text>
+                </view>-->
+          <view class="operation-btn flex-item">
+            <view wx:if="{{!feeddata.ifmark}}">
+              <image src="../../images/star2.png" bindtap='tapMark' data-text="{{feeddata.mark_num}}"></image>
+              <text style="font-size:20rpx;">标记</text>
+            </view>
+            <view wx:else>
+              <image src="../../images/star1.png" bindtap='tapMark' data-text="{{feeddata.mark_num}}"></image>
+              <text style="font-size:20rpx;">已标记</text>
+            </view>
+          </view>
+
+
+        </view>
+      </view>
+
+
+
+    </view>
+  </view>

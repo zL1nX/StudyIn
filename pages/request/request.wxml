@@ -1,0 +1,113 @@
+<!--answer.wxml-->
+<view class="container">
+ <swiper class='swiper' indicator-dots='true' interval='5000' duration='1000'>
+    <block wx:for="{{movies}}" wx:for-index="index">
+      <swiper-item>
+        <image src="{{item.url}}"/>
+      </swiper-item>
+    </block>
+    </swiper>
+ 
+  <view class="answerer-wrp">
+    <view class="bg-half"></view>
+  </view>
+  <view class="answer-content">
+  <form bindsubmit='formsubmit'>
+     <view class="feed-item">
+      <view class="picker feed-source" style="display:inline-block;">
+          <text style="width:670rpx;text-align:center;">选择类型 </text>
+        </view>
+      <radio-group name="type" bindchange="choosetype">
+       <label class="radiobox" style="margin:20rpx;" wx:for="{{typearray}}">
+          <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.value}}     
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="feed-item">
+      <view class="feed-source" style="display:flex;">
+        <text style="font-weight:bolder;width:750rpx;text-align:center;">主题</text>
+      </view>
+      <input name="request1" style="margin-left:22rpx;width:650rpx;adding:0rpx 0rpx 30rpx 30rpx;border-radius:10rpx;" auto-focus/>
+    </view>
+
+
+
+     <view class="feed-item">
+      <picker name="pickclass"  bindchange='chooseclass' value="{{indexc}}" range="{{classarray}}">
+        <view class="picker feed-source" style="display:inline-block;">
+          <text style="width:670rpx;text-align:center;">选择科目 </text>
+        </view>
+         <view class="picker feed-source" style="display:inline-block;">
+          <text style="font-weight:bolder;width:670rpx;text-align:center;font-size:35rpx;color:#007979;">{{classarray[indexc]}}</text>
+        </view>
+      </picker>
+    </view>
+
+
+  
+    <view class="feed-item">
+      <picker name="pickplace" bindchange='chooseplace' value="{{indexp}}" range="{{placearray}}">
+        <view class="picker feed-source" style="display:inline-block;">
+          <text style="width:670rpx;text-align:center;">选择地点 </text>
+        </view>
+         <view class="picker feed-source" style="display:inline-block;">
+          <text style="font-weight:bolder;width:670rpx;text-align:center;font-size:35rpx;color:#007979;">{{placearray[indexp]}}</text>
+        </view>
+      </picker>
+    </view>
+
+
+    <view class="feed-item" style="width:750rpx;display:block">
+      <picker name="pickdate"  value="{{indexdate}}" range="{{datearray}}" bindchange='choosedate'>
+        <view class="picker feed-source">
+          <text style="width:670rpx;text-align:center;">选择日期</text>
+        </view>
+        <view class="picker feed-source">
+          <text style="font-weight:bolder;width:670rpx;text-align:center;font-size:35rpx;color:#007979;">{{datearray[indexdate]}}</text>
+        </view>
+      </picker>
+    </view>
+
+
+
+    <view class="feed-item" style="width:42%;display:inline-block">
+      <picker name="pickbegintime" mode="time" value="{{begintime}}" start="08:00" end="22:30" bindchange='choosebegintime'>
+        <view class="picker feed-source">
+          <text style="width:285rpx;text-align:center">起始时间</text>
+        </view>
+        <view class="picker feed-source">
+          <text style="font-weight:bolder;width:280rpx;text-align:center;font-size:40rpx;color:#007979">{{begintime}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class="feed-item" style="width:42%;display:inline-block">
+      <picker name="pickendtime" mode="time" value="{{endtime}}" start="08:00" end="22:30" bindchange='chooseendtime'>
+        <view class="picker feed-source">
+          <text style="width:270rpx;text-align:center;">结束时间</text>
+        </view>
+        <view class="picker feed-source">
+          <text style="font-weight:bolder;width:280rpx;text-align:center;font-size:40rpx;color:#007979">{{endtime}}</text>
+        </view>
+      </picker>
+    </view>
+   
+    <view class="feed-item">
+      <view class="feed-source" style="display:flex;">
+        <text style="font-weight:bolder;width:750rpx;text-align:center;">输入详细内容</text>
+      </view>
+      <textarea class='text-area' name="request" style="margin-left:22rpx;width:650rpx;adding:0rpx 0rpx 30rpx 30rpx;" auto-focus/>
+    </view>
+    <button class='confirm-button' form-type='submit'>提交请求</button>
+    </form>
+  </view>
+
+
+  
+
+
+
+
+
+
+</view>

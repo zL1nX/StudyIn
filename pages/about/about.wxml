@@ -1,0 +1,36 @@
+<image src='/images/about.png' style='margin-top:50rpx'></image>
+<view class='title1' style='margin-top:50rpx'>StudyIn</view>
+<view class='title2'>Version 1.1</view>
+
+<view class='container2'>
+
+  <view class='flex-wrp-row item' style='margin-left:5%;margin-right:5%'>
+    <view class='item-left flex-wrp-row'>
+      <text class='text'>更新日期</text>
+    </view>
+    <view class='item-right flex-wrp-row'>
+      <text class='text2'>2019年4月12日</text>
+    </view>
+  </view>
+
+   <view class='flex-wrp-row item' style='margin-left:5%;margin-right:5%'>
+     <view class='item-left flex-wrp-row'>
+      <text class='text'>联系我们</text>
+     </view>
+     <view class='item-right flex-wrp-row'>
+      <text class='text2'>chongyuwang@foxmail.com</text>
+     </view>
+    </view>
+       <view class='flex-wrp-row item' style='margin-left:5%;margin-right:5%'>
+     <view class='item-left flex-wrp-row'>
+      <text class='text'> </text>
+     </view>
+     <view class='item-right flex-wrp-row'>
+      <text class='text2'>linxzhan9@gmail.com</text>
+     </view>
+    </view>
+  <view class='name' style='margin-top:350rpx;border-top:solid 1px #ebebeb;'>
+  <view class='title3'>C.Y.WANG X.L.ZHANG</view>
+  <view class='title3'>西安电子科技大学</view>
+  </view>
+</view>

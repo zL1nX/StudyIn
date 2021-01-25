@@ -1,0 +1,126 @@
+.user {
+  width: 725rpx;
+  background: #ffffff;
+  padding: 30rpx 25rpx 30rpx 0;
+  margin: 15rpx 0 0 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #dcdcdc;
+  box-shadow: 0 2px 5px #eeeeee;
+}
+.user .userinfo-avatar{
+  flex: 1;
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 80rpx;
+}
+.user .user-info{
+  flex: 5;
+  text-align: left;
+}
+.user .user-info text{
+  display: block;
+}
+.user .user-info .userinfo-nickname{
+  padding: 8rpx 0 10rpx 0;
+  font-size: 30rpx;
+  color: #818A8F;
+}
+.user .user-info .edit{
+  font-size: 30rpx;
+  color: #bababa;
+  line-height: 34rpx;
+}
+
+.button-back{
+  background-color:  #def1f1;
+}
+.my{
+  margin: 15rpx 0 0 0;
+  border-top: solid 1px #ebebeb;
+  border-bottom: solid 2px #ebebeb;
+}
+.my .my-item{
+  width: 750rpx;
+  background: #ffffff;
+  padding: 0
+}
+.my .my-item .myitem-icon{
+  flex: 1;
+}
+.my .my-item .myitem-icon {
+  width: 30rpx;
+  height: 30rpx;
+  padding: 27rpx 0;
+}
+
+image {
+  width:150rpx;
+  height:150rpx;
+  float:right;
+  padding:0;
+}
+
+.confirm-button{
+  margin:15rpx;
+  background-color: red;
+  color:white;
+  font-weight:bolder;
+  border-radius: 10px;
+}
+
+.button-icon {
+  height:150rpx;
+  width:100%;
+  padding-right:0;
+  padding-left:0;
+  font-size:34rpx;
+  text-align:left;
+  margin-top:30rpx;
+  border-radius:0;
+  background-color:white;
+}
+.my .my-item .myitem-name{
+  flex: 8;
+  font-size: 34rpx;
+  color:black;
+  line-height: 20rpx;
+  padding: 20rpx 0rpx;
+  border-bottom: solid 1px #ebebeb;
+}
+
+.my .my-item:last-child .myitem-name{
+  border-bottom: none;
+}
+
+
+
+.item-name {
+    text-align: left;
+    float:left;
+    padding-left:2%;
+    padding-bottom:1%;
+    padding-top:2%;
+    width:15%;  
+}
+
+.item-value {
+    width:70%;
+    color:grey;
+    text-align:left;
+    padding-left:10%;
+    padding-top:2%
+}
+
+.icon-name {
+  font-size: 34rpx;
+  padding-top:4%;
+}
+
+.weui-input
+{
+  float:right;
+  width:83%;
+  height:30rpx;
+  text-align:left;
+}

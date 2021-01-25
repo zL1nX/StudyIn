@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="search" style='display:block;vertical-align:middle;'>
+    <view class="search-left" style='display:inline-block;width:660rpx;vertical-align:middle;'>
+      <image src="../../images/search.png" style='vertical-align:middle;'></image>
+      <view style='display:inline-block;vertical-align:middle;font-size:25rpx;color:#167e6a;vertical-align:middle;'>想要自习？刷新一下</view>
+    </view>
+        <view class="search-right flex-item" bindtap="upper" style='display:inline-block;vertical-align:middle;'>
+      <image src="../../images/lighting.png" style='display:inline-block;vertical-align:middle;'></image>
+    </view>
+  </view>
+
+  <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+    <view class="feed-item" style='border-left:20rpx solid #61bfad'>
+      <view class="feed-source" style='vertical-align:middle'>
+        <a class="">
+          <view class="avatar" style='vertical-align:middle;'>
+            <image src="{{item.feed_source_img}}"></image>
+          </view>
+
+         
+            <view class="avatar" style='margin-left:15rpx;margin-right:15rpx;vertical-align:middle;'><image src="/images/level{{item.level}}.png" style='height:35rpx;width:105rpx;border-radius:10rpx'></image></view>
+             <text style='vertical-align:middle;'>{{item.feed_source_name}} | {{item.feed_source_txt}}</text>
+        </a>
+      </view>
+      <view class="feed-source" style='vertical-align:middle;font-size:30rpx;padding-top:20rpx;font-weight:bold;'>{{item.question}}</view>
+      <view class="feed-content">
+        <view class="question" id="{{item.question_id}}" bindtap="bindItemTap">
+
+          <view class='item-container'>
+            <view style="display:inline-block">
+            
+
+            <view style="display:block;margin-bottom:10rpx;margin-top:10rpx;">
+              <image src="/images/activity.png" style="width:40rpx;height:40rpx;padding-right:40rpx; vertical-align:middle;"></image>
+              <view class='item_value'>{{item.date}}</view>
+            </view>
+
+            <view style="display:block;margin-bottom:10rpx">
+              <image src="/images/time.png" style="width:40rpx;height:40rpx;padding-right:40rpx; vertical-align:middle;"></image>
+              <view class='item_value'>{{item.time_start}} ~ {{item.time_end}}</view>
+            </view>
+
+            <view style="display:block;margin-bottom:10rpx">
+              <image src="/images/coordinates.png" style="width:40rpx;height:40rpx;padding-right:40rpx; vertical-align:middle;"></image>
+              <view class='item_value'>{{item.location}}</view>
+            </view>
+            </view>
+            <view class='time_value'>
+              <text style="padding-right:30rpx;font-size:50rpx;font-weight:bold;color:#167e6a;">{{item.subject}}</text>
+            </view>
+
+          </view>
+
+          <view class="answer-body">
+
+            <view class="answer-actions">
+              <view>
+                <a wx:if="{{item.good_num}}"> 已预约</a>
+                <a style="color:red;" wx:else> 未预约</a>
+              </view>
+              <view>
+                <a> · {{item.mark_num}} 标记</a>
+              </view>
+
+            </view>
+          </view>
+        </view>
+      </view>
+      </view>
+  </block>
+</scroll-view>

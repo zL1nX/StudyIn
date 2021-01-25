@@ -1,0 +1,70 @@
+
+ <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <view class='icon-name item-name'>头像</view>
+         <image src="{{ avatar }}" />
+      </view>
+    </view>
+
+<view class='container more'>
+  <view class='my'>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <view class='item-name'>昵称</view>
+        <view class='item-value'>{{ name }}</view>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <text class='item-name'>性别</text><text class='item-value'>{{PersonInfo.sex}}</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <text class='item-name'>学号</text><text class='item-value'>{{PersonInfo.num}}</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <text class='item-name'>学院</text><text class='item-value'>{{PersonInfo.school}}</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <text class='item-name'>专业</text><text class='item-value'>{{PersonInfo.major}}</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <text class='item-name'>特长</text><text class='item-value'>{{PersonInfo.skill}}</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <text class='item-name'>其他</text><text class='item-value'>{{PersonInfo.other}}</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <text class='item-name'>QQ</text><text class='item-value'>{{PersonInfo.QQ}}</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <text class='item-name'>微信</text><text class='item-value'>{{PersonInfo.wechat}}</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <text class='item-name'>手机</text><text class='item-value'>{{PersonInfo.phonenum}}</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <text class='item-name'>邮箱</text><text class='item-value'>{{PersonInfo.email}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<button class='confirm-button' buttontype='defaule' bindtap='navToChange' style="font-weight:bolder;background-color:#61bfad;">修改信息</button>

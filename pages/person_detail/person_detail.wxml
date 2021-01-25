@@ -1,0 +1,61 @@
+<view class='touxiang_container'>
+<image class="touxiang" src="{{feeddata.feed_source_img}}"></image>
+<image class="title" src="/images/24280.jpg">
+
+</image>
+</view> 
+<view class='name'>{{feeddata.feed_source_name}}</view>
+<view class='sex_grade'>{{feeddata.sex}}     {{feeddata.grade}}年级
+</view>
+
+<view style='text-align:center;margin-top:15rpx;'>
+<image wx:if="{{feeddata.level>=0}}" src="/images/level{{feeddata.level}}.png" style='height:35rpx;width:105rpx;margin-right:15rpx;border-radius:10rpx;'></image>
+<progress percent="{{remain*100/levelarr[feeddata.level].std}}" style='width:80%;font-size:24rpx;margin-left:75rpx;'> - ({{remain}}/{{levelarr[feeddata.level].std}})</progress>
+</view>
+
+
+
+
+
+<view class='item_container'>
+
+<view class='info_item'>
+  <text class='item_name'>学院</text>
+  <text class='item_value'>{{feeddata.school}}</text>
+</view>
+
+<view class='info_item'>
+  <text class='item_name'>专业</text>
+  <text class='item_value'>{{feeddata.major}}</text>
+</view>
+
+<view class='info_item'>
+  <text class='item_name'>爱好</text>
+  <text class='item_value'>{{feeddata.skill}}</text>
+</view>
+
+<view class='info_item'>
+  <text class='item_name'>QQ</text>
+  <text class='item_value'>{{feeddata.QQ}}</text>
+</view>
+
+<view class='info_item'>
+  <text class='item_name'>微信</text>
+  <text class='item_value'>{{feeddata.wechat}}</text>
+</view>
+
+
+<view class='info_item'>
+  <text class='item_name'>邮箱</text>
+  <text class='item_value'>{{feeddata.email}}</text>
+</view>
+
+<view class='info_item'>
+  <text class='item_name'>其他</text>
+  <text class='item_value'>{{feeddata.other}}</text>
+</view>
+
+</view>
+
+<view class='history_bar'>   <text style='padding:20rpx;'>   应答记录</text></view>
+<view class='history'><text>暂无记录</text></view>

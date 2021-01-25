@@ -1,0 +1,78 @@
+<view class="container more">
+
+  <view class="user flex-wrp" bindtap='changeInfo'>
+    <view class="avatar flex-item" style='margin-left:10rpx;'>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="user-info flex-item" style='display:inline-block'>
+      <text class="userinfo-nickname" style='margin-top:20rpx;'>{{userInfo.nickName}}</text>
+    </view>
+    <view class='score1'>我的积分</view>
+    <view class='score2'>{{userInfo.score}}</view>
+
+  </view>
+
+  <view class='title'> 活 动 一 览 </view>
+
+  <swiper class='swiper' indicator-dots='true' interval='5000' duration='1000'>
+    <block wx:for="{{movies}}" wx:for-index="index">
+      <swiper-item>
+        <image src="{{item.url}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='title'> 热 门 兑 换 </view>
+
+
+  <view class="user flex-wrp" style='height:200rpx;display:block;'>
+    <view>
+      <view class="avatar flex-item" style='margin-left:10rpx;width:300rpx;display:inline-block;'>
+        <image class="food_image" src="/images/food1.jpg" background-size="cover"></image>
+      </view>
+      <view style='display:inline-block;width:350rpx;vertical-align:middle;margin-left:30rpx;'>
+        <view style='margin-bottom:20rpx;'>
+          <view class='score3' style='width:350px;font-size:40rpx'>西电印象明信片</view>
+        </view>
+        <view style='margin-top:20rpx;'>
+          <view class='score3' style='width:200rpx;'>兑换积分</view>
+          <view class='score4'>120</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="user flex-wrp" style='height:200rpx;display:block;'>
+    <view>
+      <view class="avatar flex-item" style='margin-left:10rpx;width:300rpx;display:inline-block;'>
+        <image class="food_image" src="/images/food2.jpg" background-size="cover"></image>
+      </view>
+      <view style='display:inline-block;width:350rpx;vertical-align:middle;margin-left:30rpx;'>
+        <view style='margin-bottom:20rpx;'>
+          <view class='score3' style='width:350px;font-size:40rpx'>益禾堂奶茶优惠券</view>
+        </view>
+        <view style='margin-top:20rpx;'>
+          <view class='score3' style='width:200rpx;'>兑换积分</view>
+          <view class='score4'>50</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="user flex-wrp" style='height:200rpx;display:block;'>
+    <view>
+      <view class="avatar flex-item" style='margin-left:10rpx;width:300rpx;display:inline-block;'>
+        <image class="food_image" src="/images/xiaojiang.png" background-size="cover"></image>
+      </view>
+      <view style='display:inline-block;width:350rpx;vertical-align:middle;margin-left:30rpx;'>
+        <view style='margin-bottom:20rpx;'>
+          <view class='score3' style='width:350px;font-size:40rpx'>西电小将钥匙扣</view>
+        </view>
+        <view style='margin-top:20rpx;'>
+          <view class='score3' style='width:200rpx;'>兑换积分</view>
+          <view class='score4'>30</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

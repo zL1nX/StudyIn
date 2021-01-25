@@ -1,0 +1,113 @@
+.user {
+  width: 725rpx;
+  background: #ffffff;
+  padding: 30rpx 25rpx 30rpx 0;
+  margin: 15rpx 0 0 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #dcdcdc;
+  box-shadow: 0 2px 5px #eeeeee;
+}
+.user .userinfo-avatar{
+  flex: 1;
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 80rpx;
+}
+.user .user-info{
+  flex: 5;
+  text-align: left;
+}
+.user .user-info text{
+  display: block;
+}
+.user .user-info .userinfo-nickname{
+  padding: 8rpx 0 10rpx 0;
+  font-size: 30rpx;
+  color: #818A8F;
+}
+.user .user-info .edit{
+  font-size: 30rpx;
+  color: #bababa;
+  line-height: 34rpx;
+}
+
+.score {
+  display:inline-block;
+  width:100rpx;
+  height:100rpx;
+  margin-left:50rpx;
+}
+
+.score1 {
+  margin-top:30rpx;
+  margin-right:15rpx;
+  font-size:30rpx;
+}
+
+.score2 {
+  font-size:40rpx;
+  display:inline-block;
+font-weight:bold;
+color:#167e6a;
+margin-top:25rpx;
+margin-right:45rpx;
+}
+
+.score3 {
+  font-size:30rpx;
+  display:inline-block
+}
+
+.score4 {
+  font-size:40rpx;
+  display:inline-block;
+font-weight:bold;
+color:#167e6a;
+}
+
+
+.num1 {
+  position:absolute;
+font-size:80rpx;
+font-weight:bold;
+color:#61bfad;
+left:90rpx;
+top:260rpx;
+
+}
+
+
+.num2 {
+  position:absolute;
+  font-size:35rpx;
+  top:360rpx;
+  left:100rpx;
+
+}
+
+.swiper {
+  height: 400rpx;
+  width: 100%;
+  margin-top:20rpx;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+.food_image {
+  height:200rpx;
+  width:250rpx;
+  vertical-align:middle;
+}
+
+.title {
+  width:750rpx;
+text-align:center;
+font-size:35rpx;
+color:#167e6a;
+height:50rpx;
+margin-top:20rpx;
+
+}

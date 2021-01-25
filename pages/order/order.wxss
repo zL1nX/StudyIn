@@ -1,0 +1,117 @@
+/**index.wxss**/
+
+.container {
+  height : 660px;
+}
+.container .search{
+  width: 735rpx;
+  height: 65rpx;
+  padding: 12.5rpx 0 12.5rpx 15rpx;
+  background: #2A8CE5;
+}
+.container .search-left{
+  flex: 8;
+  background: #4EA3E7;
+  text-align: left;
+}
+.container .search-left input{
+  display: inline-block;
+  height: 65rpx;
+  font-size: 26rpx;
+}
+.search-placeholder{
+  color: #8CCEFD;
+  line-height: 20rpx;
+}
+.container .search .search-left image{
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+.container .search .search-right{
+  flex: 1;
+}
+.container .search .search-right image{
+  width: 45rpx;
+  height: 45rpx;
+  padding: 10rpx;
+}
+
+.container{
+  padding: 0;
+  font-size: 14rpx;
+  background: #F0F4F3;
+  color: #000;
+}
+.showtext{
+  position: realtive;
+  text-align: center;
+  padding: 40rpx 50rpx 30rpx;
+  color:#55ab9b;
+  font-size:50rpx;
+  line-height: 50rpx;
+}
+
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.commodity_attr_box {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding-top: 20rpx;
+}
+
+fontstyle{
+  font-size:50px;
+  text-align: center;
+  
+}
+
+.swiper-tab{  
+    width: 100%;    
+    text-align: center;    
+    line-height: 80rpx;  
+    border-bottom: 1px solid #000;  
+    display: flex;  
+    flex-direction: row;  
+    justify-content: center;  
+}  
+.tab-item{  
+    flex: 1;  
+    font-size: 30rpx;    
+    display: inline-block;     
+    color: #777777;  
+}  
+.on{  
+    color: #61bfad;    
+    border-bottom: 5rpx solid #50a594;  
+}  
+.swiper{ display: block; height: 100%; width: 100%; overflow: hidden; }    
+.swiper view{    
+    text-align: center;   
+    padding-top: 100rpx;   
+}    
+
+.answer-body {
+  text-align:right;
+font-size:25rpx;
+margin-top:15rpx;
+}
+/*feed-item part is in app.wxss for multiplexing*/

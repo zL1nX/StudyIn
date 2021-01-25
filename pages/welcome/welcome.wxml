@@ -1,0 +1,21 @@
+
+
+
+
+<!--index.wxml-->
+<scroll-view scroll-y="true"  bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<image src='/images/logo1.jpg'></image>
+<view class='text1'>欢迎使用StudyIn!</view>
+
+<view class='welcome-container'>
+<view style='font-size:30rpx;'>我们将获取以下权限</view>
+<view class='text2'> · 获得您的公开信息（昵称、头像）</view>
+<view class='info-container'>
+<view class='touxiang' style='display:inline-block; vertical-align:middle;'><open-data type="userAvatarUrl"></open-data></view>
+<view class='name' style='display:inline-block; vertical-align:middle;'><open-data type="userNickName"></open-data></view>
+</view>
+</view>
+
+ <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view>
+</scroll-view>

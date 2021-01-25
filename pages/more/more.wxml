@@ -1,0 +1,93 @@
+
+<view class="container more">
+  <view class="user flex-wrp" bindtap='changeInfo'>
+    <view class="avatar flex-item">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="user-info flex-item" style='display:inline-block'>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="edit">查看或编辑个人主页</text>
+    </view>
+     <button class="{{tapping==0 ? 'buttonactive':'buttoninactive'}}"  catchtap="bindsign">{{buttontxt}}</button>
+  </view>
+
+
+  <view class="my" style="background-color:white;width:750rpx;height:330rpx;">
+      <view class='progress_box'>
+      <canvas class="progress_bg" canvas-id="canvasProgressbg"> </canvas>
+      <canvas class="progress_canvas" canvas-id="canvasProgress"> </canvas>
+    </view>
+     <view class='num1'>{{remain}}</view>
+      <view class='num2' >/{{levelarr[userInfo.level].std}}</view>
+    <view class='score_box'>
+      <view class='score' style='border-right:1px solid rgba(163, 186, 175, 0.53);margin-left:130rpx;padding-right:34rpx'>
+        <view class='score1' >总荣誉</view>
+        <view class='score2' style='margin-left:20rpx;'>{{userInfo.honour}}</view>
+      </view>
+      <view class='score'>
+        <view class='score1' style='margin-left:2rpx'>积分</view>
+        <view class='score2'>{{userInfo.score}}</view>
+      </view>
+       <button size="mini" type='primary' style="background-color:#61bfad;border-radius:5rpx;width:266rpx;margin-left:65px;margin-top:20rpx;" bindtap='scoreShop'>积分商城</button>
+    </view>
+    <image wx:if="{{userInfo.level>=0}}" src="/images/level{{userInfo.level}}.png" style='height:35rpx;width:105rpx;margin-left:87rpx;border-radius:10rpx;' ></image>
+  </view>
+
+
+
+
+  <view class="my">
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item" bindtap='myOrder'>
+        <image src="../../images/order1.png"></image>
+      </view>
+      <view class="myitem-name flex-item" bindtap='myOrder'>
+        <text>我的预约</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp" bindtap='myMark'>
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/mark1.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>我的标记</text>
+      </view>
+    </view>
+    <view class="my-item flex-wrp" bindtap='myVideo'>
+      <view class="myitem-icon flex-item">
+        <image src="../../images/video3.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>学堂视频</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="my" bindtap='member'>
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item" >
+        <image src="../../images/member.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>加入会员</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="my">
+    <view class="my-item flex-wrp" bindtap='about'>
+      <view class="myitem-icon flex-item">
+        <image src="../../images/question.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>关于StudyIn</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='my'></view>
+
+
+</view>
+
+

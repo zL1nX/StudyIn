@@ -1,0 +1,14 @@
+.imagestyle{
+  width:100%;
+  height:240px;
+}
+
+.video-wrap{
+  padding:10rpx 10rpx 10rpx 10rpx;
+
+}
+
+.title {
+  font-size:30rpx;
+  color:black;
+}

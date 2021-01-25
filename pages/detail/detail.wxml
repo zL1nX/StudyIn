@@ -1,0 +1,65 @@
+<!--answer.wxml-->
+<view class="container">
+    <view class="answerer-wrp">
+        <view class="bg-half"><view class='title'>{{item.vtitle}}</view></view>
+        
+    </view>
+
+
+    <view class="answer-content">
+      <view class="imagewrap">
+        <image src="{{item.vimage}}" class="imagestyle"></image>
+      </view>
+
+        <view class="titlewrap" >
+            
+            <view wx:if="{{showable}}" class="introstyle" bindtap="show" style="  border-top-left-radius: 20rpx;">
+              <view style="font-size:35rpx;text-align:center;padding-top:10rpx;">简介</view>
+            </view>
+            
+            <view wx:if="{{!showable}}" class="comstyle" bindtap="show">
+              <view style="font-size:35rpx;text-align:center;padding-top:10rpx;">简介</view>
+            </view>
+          
+            <view wx:if="{{!showable}}" class="introstyle" bindtap="show" style="  border-top-right-radius: 20rpx;">
+             <view style="font-size:35rpx;text-align:center;padding-top:10rpx;">评论</view>
+            </view>
+
+            <view wx:if="{{showable}}" class="comstyle" bindtap="show">
+             <view style="font-size:35rpx;text-align:center;padding-top:10rpx;">评论</view>
+            </view>
+          
+        </view>
+
+
+        <view class="contentwrap">
+          <view class="introcontent" wx:if="{{showable}}">
+            <view style="padding:25rpx;font-size:26rpx;color:#fff;line-height:50rpx;">{{comments[item.vid-1]}}</view>
+          </view>
+      
+          <view class="commcontent"  wx:if="{{!showable}}">
+            <text>CrazyY：讲的很全面</text>
+            <text>zzz111：适合入门学习用</text>
+            <text>今天长高了吗：要是有习题讲解就好了</text>
+            <text>飞翔的白菜：老师讲解很到位啊</text>
+            <text>王某人：一般般吧，需要自己再深入了解</text>
+            <view class="answer-footer flex-wrp">
+            
+            <!--
+            <button class="buttonstyle"><text style='color:#5faf9f; padding:10rpx;display:block'>我要评价</text></button>
+            -->
+            </view>
+          </view>
+          
+        </view> 
+
+        
+
+    </view>
+
+        
+    
+
+    
+</view>
+

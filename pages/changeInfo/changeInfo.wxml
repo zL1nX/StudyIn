@@ -1,0 +1,90 @@
+
+<view class="my-item flex-wrp button-back">
+  <button class='button-icon' bindtap='changeAvatar'>
+    <view class='icon-name item-name'>头像</view>
+    <image src="{{ avatar }}" />
+  </button>
+</view>
+
+<view class='container more'>
+  <view class='my'>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <view class='item-name'>昵称</view>
+        <view class='item-value'>{{ name }}</view>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <picker class="myitem-name flex-item" bindchange='choosesex' value="{{indexsex}}" range="{{sexarray}}">
+        <view class='item-name'>性别</view>
+        <view class='item-value'>{{PersonInfo.sex}}</view>
+      </picker>
+    </view>
+    
+
+    <view class="my-item flex-wrp">
+      <picker class="myitem-name flex-item" bindchange='chooseschool' value="{{indexschool}}" range="{{schoolarray}}">
+        <view class='item-name'>学院</view>
+        <view class='item-value'>{{PersonInfo.school}}</view>
+      </picker>
+    </view>
+    <view class="my-item flex-wrp">
+      <picker class="myitem-name flex-item" bindchange='choosemajor' value="{{ indexmajor }}" range="{{ majorarray[indexschool] }}">
+        <view class='item-name'>专业</view>
+        <view class='item-value'>{{PersonInfo.major}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='my'>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <view class='item-name'>学号</view>
+        <input class="weui-input" type="number" placeholder="{{PersonInfo.num}}" bindinput="inputNumber" maxlength='11' />
+      </view>
+    </view>
+
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <view class='item-name'>爱好</view>
+        <input class="weui-input" placeholder="{{PersonInfo.skill}}" bindinput="inputSkill" />
+      </view>
+    </view>
+
+    
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <view class='item-name'>其他</view>
+        <input class="weui-input" placeholder="{{PersonInfo.other}}" bindinput="inputOther" />
+      </view>
+    </view>
+
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <view class='item-name'>QQ</view>
+        <input class="weui-input" type="number" placeholder="{{PersonInfo.QQ}}" bindinput="inputQQ" maxlength='11' />
+      </view>
+    </view>
+
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <view class='item-name'>微信</view>
+         <input class="weui-input" type="number" placeholder="{{PersonInfo.wechat}}" bindinput="inputWechat"/>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <view class='item-name'>手机</view>
+            <input class="weui-input" type="number" placeholder="{{PersonInfo.phonenum}}" bindinput="inputPhonenum" maxlength='11' />
+
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-name flex-item">
+        <view class='item-name'>邮箱</view>
+           <input class="weui-input" placeholder="{{PersonInfo.email}}" bindinput="inputEmail" />
+      </view>
+    </view>
+  </view>
+</view>
+
+<button class='confirm-button' type='defaule' bindtap='confirm'>确认修改</button>
